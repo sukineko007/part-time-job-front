@@ -58,7 +58,7 @@
         params.append('salary',this.form.salary);
         params.append('mailbox',this.form.mailbox);
         params.append('phone',this.form.phone);
-        this.axios.post('http://47.101.218.83:8700/wanted/addWanted',params)
+        this.axios.post('http://49.235.193.231:8700/wanted/addWanted',params)
           .then( res => {
             this.$message.success('添加成功！');
             bus.$emit("isLast2");

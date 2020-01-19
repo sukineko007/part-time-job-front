@@ -362,7 +362,7 @@
         params.append('username',this.form.username);
         params.append('password',this.form.password);
         if(this.key == 1) {
-          this.axios.post('http://47.101.218.83:8700/login/login1', params)
+          this.axios.post('http://49.235.193.231:8700/login/login1', params)
             .then(res => {
               console.log(res.data);
               this.userData = res.data;
@@ -391,7 +391,7 @@
               this.$message.error('请正确选择用户类型！');
             })
         }else if(this.key == 2){
-          this.axios.post('http://47.101.218.83:8700/login/login2', params)
+          this.axios.post('http://49.235.193.231:8700/login/login2', params)
             .then(res => {
               console.log(res.data);
               this.userData = res.data;
@@ -423,7 +423,7 @@
 
         }else if(this.key == 3)
         {
-          this.axios.post('http://47.101.218.83:8700/login/login3', params)
+          this.axios.post('http://49.235.193.231:8700/login/login3', params)
             .then(res => {
               console.log(res.data);
               this.userData = res.data;
@@ -479,7 +479,7 @@
           params.append('mailbox', this.form1.mailbox);
           params.append('telephone', this.form1.telephone);
           params.append('type',3);
-          this.axios.post('http://47.101.218.83:8700/enterprise/addEnterprise', params)
+          this.axios.post('http://49.235.193.231:8700/enterprise/addEnterprise', params)
             .then(res => {
               loadingInstance.close();
               this.$message.success('注册成功！');
@@ -522,7 +522,7 @@
           params.append('classes', this.form2.stuClass);
           params.append('phone',this.form2.stuPhone);
           params.append('type', 2);
-          this.axios.post('http://47.101.218.83:8700/student/addStudent', params)
+          this.axios.post('http://49.235.193.231:8700/student/addStudent', params)
             .then(res => {
               loadingInstance.close();
               this.$message.success('注册成功！');
@@ -569,7 +569,7 @@
     mounted(){
 
       //获取已存在企业用户信息
-      this.axios.get('http://47.101.218.83:8700/enterprise/getEnterprise',{
+      this.axios.get('http://49.235.193.231:8700/enterprise/getEnterprise',{
         params: {}
       })
         .then( res => {
@@ -585,7 +585,7 @@
         })
 
       //获取已存在学生信息
-      this.axios.get('http://47.101.218.83:8700/student/getStudent',{
+      this.axios.get('http://49.235.193.231:8700/student/getStudent',{
         params: {}
       })
         .then( res => {

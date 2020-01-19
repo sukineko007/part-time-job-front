@@ -82,7 +82,7 @@
         params.append('classes',this.form.stuClass);
         params.append('phone',this.form.stuPhone);
         params.append('type',2);
-        this.axios.post('http://47.101.218.83:8700/student/addStudent',params)
+        this.axios.post('http://49.235.193.231:8700/student/addStudent',params)
           .then( res => {
             loadingInstance.close();
             this.$message.success('添加成功！');

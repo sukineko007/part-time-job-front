@@ -149,7 +149,7 @@
                 console.log("error");
               })
           } else {   //平常页
-            this.axios.get('http://47.101.218.83:8700/recruit/getRecruit',{
+            this.axios.get('http://49.235.193.231:8700/recruit/getRecruit',{
               params: {
               }
             })
@@ -169,7 +169,7 @@
           this.loading = true;
           this.currentPage = val;
           if (this.isSerach) {   //如果是搜索内容页面切换
-            this.axios.get('http://47.101.218.83:8700/recruit/searchRecruit',{
+            this.axios.get('http://49.235.193.231:8700/recruit/searchRecruit',{
               params: {
                 data:this.searchContent
               }
@@ -186,7 +186,7 @@
                 console.log("error");
               })
           } else {
-            this.axios.get('http://47.101.218.83:8700/recruit/getRecruit', {
+            this.axios.get('http://49.235.193.231:8700/recruit/getRecruit', {
               params: {}
             })
               .then(res => {
@@ -204,7 +204,7 @@
         this.userEntity = JSON.parse(userJsonStr);
         console.log(this.userEntity.type);
 
-        this.axios.get('http://47.101.218.83:8700/recruit/getRecommend',{
+        this.axios.get('http://49.235.193.231:8700/recruit/getRecommend',{
           params: {
             id:this.userEntity.id
           }

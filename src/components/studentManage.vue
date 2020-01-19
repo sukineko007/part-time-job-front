@@ -190,7 +190,7 @@
         }else{
           this.loading = true;
           this.isSerach = true;
-          this.axios.get('http://47.101.218.83:8700/student/searchStudent',{
+          this.axios.get('http://49.235.193.231:8700/student/searchStudent',{
             params: {
               data:this.searchContent
             }
@@ -220,11 +220,11 @@
           this.loading = true;
           var params = new URLSearchParams();
           params.append("id",id);
-          this.axios.post('http://47.101.218.83:8700/student/delStudent',params)
+          this.axios.post('http://49.235.193.231:8700/student/delStudent',params)
             .then( res => {
               this.$message.success('删除成功！');
               //删除成功后重新请求当前页
-              this.axios.get('http://47.101.218.83:8700/student/getStudent',{
+              this.axios.get('http://49.235.193.231:8700/student/getStudent',{
                 params: {
                 }
               })
@@ -275,7 +275,7 @@
               console.log("error");
             })
         } else {   //平常页
-          this.axios.get('http://47.101.218.83:8700/student/getStudent',{
+          this.axios.get('http://49.235.193.231:8700/student/getStudent',{
             params: {
             }
           })
@@ -314,7 +314,7 @@
               console.log("error");
             })
         } else {
-          this.axios.get('http://47.101.218.83:8700/student/getStudent',{
+          this.axios.get('http://49.235.193.231:8700/student/getStudent',{
             params: {
             }
           })
@@ -356,11 +356,11 @@
             params.append("data",str);
             params.append("type",this.region);
             this.loading = true;
-            this.axios.post('http://47.101.218.83:8700/student/bachDelete',params)
+            this.axios.post('http://49.235.193.231:8700/student/bachDelete',params)
               .then( res => {
                 this.$message.success('删除成功！');
                 //删除成功后其重新请求当前页
-                this.axios.get('http://47.101.218.83:8700/student/getStudent',{
+                this.axios.get('http://49.235.193.231:8700/student/getStudent',{
                   params: {
                   }
                 })
@@ -391,7 +391,7 @@
       this.userEntity = JSON.parse(userJsonStr);
       console.log(this.userEntity.type);
 
-      this.axios.get('http://47.101.218.83:8700/student/getStudent',{
+      this.axios.get('http://49.235.193.231:8700/student/getStudent',{
         params: {}
       })
         .then( res => {
@@ -410,7 +410,7 @@
       var lastPage = 0;
       //监听增加题目发来的信息
       bus.$on('isLast', function (data) {
-        this.axios.get('http://47.101.218.83:8700/student/getStudent',{
+        this.axios.get('http://49.235.193.231:8700/student/getStudent',{
           params: {
           }
         })

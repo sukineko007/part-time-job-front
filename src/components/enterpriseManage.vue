@@ -195,7 +195,7 @@
         }else{
           this.loading = true;
           this.isSerach = true;
-          this.axios.get('http://47.101.218.83:8700/enterprise/searchEnterprise',{
+          this.axios.get('http://49.235.193.231:8700/enterprise/searchEnterprise',{
             params: {
               data:this.searchContent
             }
@@ -225,11 +225,11 @@
           this.loading = true;
           var params = new URLSearchParams();
           params.append("id",id);
-          this.axios.post('http://47.101.218.83:8700/enterprise/delEnterprise',params)
+          this.axios.post('http://49.235.193.231:8700/enterprise/delEnterprise',params)
             .then( res => {
               this.$message.success('删除成功！');
               //删除成功后重新请求当前页
-              this.axios.get('http://47.101.218.83:8700/enterprise/getEnterprise',{
+              this.axios.get('http://49.235.193.231:8700/enterprise/getEnterprise',{
                 params: {
                 }
               })
@@ -261,7 +261,7 @@
         this.loading = true;
         this.pageSize = val;
         if (this.isSerach) {    //如果是搜索页
-          this.axios.get('http://47.101.218.83:8700/enterprise/searchEnterprise', {
+          this.axios.get('http://49.235.193.231:8700/enterprise/searchEnterprise', {
             params: {
               page: this.currentPage,
               limit: this.currentLimit,
@@ -281,7 +281,7 @@
               console.log("error");
             })
         } else {   //平常页
-          this.axios.get('http://47.101.218.83:8700/enterprise/getEnterprise', {
+          this.axios.get('http://49.235.193.231:8700/enterprise/getEnterprise', {
             params: {
 
             }
@@ -304,7 +304,7 @@
         this.loading = true;
         this.currentPage = val;
         if (this.isSerach) {   //如果是搜索内容页面切换
-          this.axios.get('http://47.101.218.83:8700/enterprise/searchEnterprise', {
+          this.axios.get('http://49.235.193.231:8700/enterprise/searchEnterprise', {
             params: {
               page: this.currentPage,
               limit: this.currentLimit,
@@ -323,7 +323,7 @@
               console.log("error");
             })
         } else {
-          this.axios.get('http://47.101.218.83:8700/enterprise/getEnterprise', {
+          this.axios.get('http://49.235.193.231:8700/enterprise/getEnterprise', {
             params: {}
           })
             .then(res => {
@@ -362,11 +362,11 @@
             params.append("data",str);
             params.append("type",this.region);
             this.loading = true;
-            this.axios.post('http://47.101.218.83:8700/enterprise/bachDelete',params)
+            this.axios.post('http://49.235.193.231:8700/enterprise/bachDelete',params)
               .then( res => {
                 this.$message.success('删除成功！');
                 //删除成功后其重新请求当前页
-                this.axios.get('http://47.101.218.83:8700/enterprise/getEnterprise',{
+                this.axios.get('http://49.235.193.231:8700/enterprise/getEnterprise',{
                   params: {
                   }
                 })
@@ -396,7 +396,7 @@
       this.userEntity = JSON.parse(userJsonStr);
       console.log(this.userEntity.type);
 
-      this.axios.get('http://47.101.218.83:8700/enterprise/getEnterprise',{
+      this.axios.get('http://49.235.193.231:8700/enterprise/getEnterprise',{
         params: {}
       })
         .then( res => {
@@ -415,7 +415,7 @@
       var lastPage = 0;
       //监听增加题目发来的信息
       bus.$on('isLast', function (data) {
-        this.axios.get('http://47.101.218.83:8700/enterprise/getEnterprise',{
+        this.axios.get('http://49.235.193.231:8700/enterprise/getEnterprise',{
           params: {
           }
         })

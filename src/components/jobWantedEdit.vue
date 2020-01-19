@@ -77,7 +77,7 @@
         params.append('jianli',this.form.jianli);
         params.append('mailbox',this.form.mailbox);
         params.append('phone',this.form.phone);
-        this.axios.post('http://47.101.218.83:8700/wanted/updateWanted',params)
+        this.axios.post('http://49.235.193.231:8700/wanted/updateWanted',params)
           .then( res => {
             loadingInstance.close();
             this.$message.success('修改成功！');

@@ -82,7 +82,7 @@
         params.append('mailbox',this.form.mailbox);
         params.append('telephone',this.form.telephone);
         params.append('type',3);
-        this.axios.post('http://47.101.218.83:8700/enterprise/addEnterprise',params)
+        this.axios.post('http://49.235.193.231:8700/enterprise/addEnterprise',params)
           .then( res => {
             loadingInstance.close();
             this.$message.success('添加成功！');

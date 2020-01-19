@@ -59,7 +59,7 @@
         params.append('address',this.form.address);
         params.append('salary',this.form.salary);
         params.append('contractTime',this.form.contractTime);
-        this.axios.post('http://47.101.218.83:8700/employ/updateEmploy',params)
+        this.axios.post('http://49.235.193.231:8700/employ/updateEmploy',params)
           .then( res => {
             loadingInstance.close();
             this.$message.success('修改成功！');

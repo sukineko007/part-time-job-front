@@ -197,7 +197,7 @@
         }else{
           this.loading = true;
           this.isSerach = true;
-          this.axios.get('http://47.101.218.83:8700/recruit/searchRecruit',{
+          this.axios.get('http://49.235.193.231:8700/recruit/searchRecruit',{
             params: {
               data:this.searchContent
             }
@@ -227,11 +227,11 @@
           this.loading = true;
           var params = new URLSearchParams();
           params.append("id",id);
-          this.axios.post('http://47.101.218.83:8700/recruit/delRecruit',params)
+          this.axios.post('http://49.235.193.231:8700/recruit/delRecruit',params)
             .then( res => {
               this.$message.success('删除成功！');
               //删除成功后重新请求当前页
-              this.axios.get('http://47.101.218.83:8700/recruit/getRecruit2',{
+              this.axios.get('http://49.235.193.231:8700/recruit/getRecruit2',{
                 params: {
                   enterId:this.userEntity.id
                 }
@@ -283,7 +283,7 @@
               console.log("error");
             })
         } else {   //平常页
-          this.axios.get('http://47.101.218.83:8700/recruit/getRecruit',{
+          this.axios.get('http://49.235.193.231:8700/recruit/getRecruit',{
             params: {
             }
           })
@@ -303,7 +303,7 @@
         this.loading = true;
         this.currentPage = val;
         if (this.isSerach) {   //如果是搜索内容页面切换
-          this.axios.get('http://47.101.218.83:8700/recruit/searchRecruit',{
+          this.axios.get('http://49.235.193.231:8700/recruit/searchRecruit',{
             params: {
               data:this.searchContent
             }
@@ -320,7 +320,7 @@
               console.log("error");
             })
         } else {
-          this.axios.get('http://47.101.218.83:8700/recruit/getRecruit', {
+          this.axios.get('http://49.235.193.231:8700/recruit/getRecruit', {
             params: {}
           })
             .then(res => {
@@ -359,11 +359,11 @@
             params.append("data",str);
             params.append("type",this.region);
             this.loading = true;
-            this.axios.post('http://47.101.218.83:8700/recruit/bachDelete',params)
+            this.axios.post('http://49.235.193.231:8700/recruit/bachDelete',params)
               .then( res => {
                 this.$message.success('删除成功！');
                 //删除成功后其重新请求当前页
-                this.axios.get('http://47.101.218.83:8700/recruit/getRecruit2',{
+                this.axios.get('http://49.235.193.231:8700/recruit/getRecruit2',{
                   params: {
                   }
                 })
@@ -395,7 +395,7 @@
       console.log(this.userEntity.type);
       if(this.userEntity.type == 3){this.showEnter = true};
       if(this.userEntity.type != 3){
-        this.axios.get('http://47.101.218.83:8700/recruit/getRecruit',{
+        this.axios.get('http://49.235.193.231:8700/recruit/getRecruit',{
           params: {
           }
         })
@@ -413,7 +413,7 @@
           })
       }
       else{
-        this.axios.get('http://47.101.218.83:8700/recruit/getRecruit2',{
+        this.axios.get('http://49.235.193.231:8700/recruit/getRecruit2',{
           params: {
             enterId:this.userEntity.id
           }
@@ -435,7 +435,7 @@
       var lastPage = 0;
       //监听增加题目发来的信息
       bus.$on('isLast2', function (data) {
-        this.axios.get('http://47.101.218.83:8700/recruit/getRecruit2',{
+        this.axios.get('http://49.235.193.231:8700/recruit/getRecruit2',{
           params: {
             enterId:this.userEntity.id
           }

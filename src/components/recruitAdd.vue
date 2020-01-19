@@ -74,7 +74,7 @@
         params.append('hrName',this.form.hrName);
         params.append('hrMailbox',this.form.hrMailbox);
         params.append('hrPhone',this.form.hrPhone);
-        this.axios.post('http://47.101.218.83:8700/recruit/addRecruit',params)
+        this.axios.post('http://49.235.193.231:8700/recruit/addRecruit',params)
           .then( res => {
             this.$message.success('添加成功！');
             bus.$emit("isLast");

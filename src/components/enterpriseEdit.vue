@@ -83,7 +83,7 @@
         params.append('introduction',this.form.introduction);
         params.append('mailbox',this.form.mailbox);
         params.append('telephone',this.form.telephone);
-        this.axios.post('http://47.101.218.83:8700/enterprise/updateEnterprise',params)
+        this.axios.post('http://49.235.193.231:8700/enterprise/updateEnterprise',params)
           .then( res => {
             loadingInstance.close();
             this.$message.success('修改成功！');

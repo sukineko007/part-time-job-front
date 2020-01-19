@@ -81,7 +81,7 @@
         params.append('hrName',this.form.hrName);
         params.append('hrMailbox',this.form.hrMailbox);
         params.append('hrPhone',this.form.hrPhone);
-        this.axios.post('http://47.101.218.83:8700/recruit/updateRecruit',params)
+        this.axios.post('http://49.235.193.231:8700/recruit/updateRecruit',params)
           .then( res => {
             loadingInstance.close();
             this.$message.success('修改成功！');
