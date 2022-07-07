@@ -15,7 +15,7 @@
     "element-ui": "^2.0.1",
     "font-awesome": "^4.7.0",
     "hls.js": "^0.12.4",
-    "moment": "^2.22.1",
+    "moment": "^2.29.4",
     "normalize.css": "^5.0.0",
     "nprogress": "^0.2.0",
     "vue": "^2.5.2",
